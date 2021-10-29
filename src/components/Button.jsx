@@ -9,7 +9,7 @@ const Button = () => {
   const { select, handleJokeButton } = context;
 
   //Grab a new joke from the API everytime the button is clicked
-  return <>{select && <button onClick={handleJokeButton}>{select}</button>}</>;
+  return <>{select && <button onClick={handleJokeButton}>Get joke</button>}</>;
 };
 
 export default Button;
