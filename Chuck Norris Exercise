@@ -15,6 +15,5 @@ for further information.
 
 Only requirements is that you use useReducer, useEffect and useContext. 
 
-If you can incorporate a custom hook into your app please do so. 
 
-The data receieved will be one joke at a time. Create a button to re-fetch another joke. Also changing the category will cause a re-fetch.
+The data received will be one joke at a time. Create a button to re-fetch another joke. 

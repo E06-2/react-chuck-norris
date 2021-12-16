@@ -3,6 +3,9 @@ import React, { useContext, useEffect } from 'react';
 //Import the context
 import MyContext from '../context/MyContext';
 
+//Import actions
+import { actions } from '../actions/actions';
+
 const DropDown = () => {
   //Get all the needed states and functions from the context
   const context = useContext(MyContext);
@@ -21,14 +24,14 @@ const DropDown = () => {
       .then((response) => response.json())
       .then((results) =>
         categoriesDispatcher({
-          type: 'GET_CATEGORIES',
+          type: actions.GET_CATEGORIES,
           payload: { ...categories, results: results, loading: false },
         })
       )
 
       .catch((error) => {
         categoriesDispatcher({
-          type: 'ERROR',
+          type: actions.ERROR,
           payload: { ...categories, error },
         });
       });
@@ -46,7 +49,7 @@ const DropDown = () => {
     <select
       defaultValue={select}
       onChange={(e) =>
-        selectDispatcher({ type: 'CHANGE', payload: e.target.value })
+        selectDispatcher({ type: actions.CHANGE, payload: e.target.value })
       }>
       <option value='default'>Please select a category</option>
       {results.map((category, index) => (

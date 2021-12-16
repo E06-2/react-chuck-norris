@@ -80,6 +80,7 @@ section select {
   outline: none;
   border-radius: 5px;
   text-align: center;
+  cursor: pointer;
 }
 
 section button {

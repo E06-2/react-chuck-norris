@@ -1,8 +1,10 @@
+import { actions } from "../actions/actions"
+
 
 //Setup our selectReducer
 const selectReducer = (state, {type, payload}) => {
     switch(type) {
-        case 'CHANGE':
+        case actions.CHANGE:
             return state = payload
         default:
             return state
